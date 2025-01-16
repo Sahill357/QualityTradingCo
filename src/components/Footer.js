@@ -11,8 +11,12 @@ export default function Footer() {
       <li>
         <div className="textwidget">
           <div className="widget-logo">
-            <img alt="logo" src="assets/images/logo-white.png" />
-            <p>The Flooring inc. is the leader of floor installation and repair in the country sed diam nonumy eirmod tempor invidunt ut labore and efficient strategy.</p>
+          <img
+    alt="logo"
+    src="assets/images/qualitytrading2-removebg-preview.png"
+    style={{ width: '150px', height: 'auto' }} // Use an object for the style prop
+  />
+            <p>Quality Trading is a trusted supplier of tiles and chemical solutions, providing high-quality products and reliable services for all your needs.</p>
           </div>
         </div>
       </li>
@@ -24,16 +28,20 @@ export default function Footer() {
           <div className="widget-info">
             <ul>
               <li>
-                <span><span>Phone:</span> +1 123 457 653</span>
+                <span><span>Phone:</span> +91 8657474749</span>
               </li>
               <li>
-                <span><span>Fax:</span> +1 496 457 654</span>
+                <span><span>Fax:</span> +91 9511725321</span>
               </li>
               <li>
-                <span><span>Email:</span> <a href="mailto:email@website.com">our-mail@example.com</a></span>
+                <span>
+  <span>Email:</span>
+  <a href="mailto:qualitytradingco1@gmail.com">qualitytradingco1@gmail.com</a>
+</span>
+
               </li>
               <li>
-                <span><span>Adress:</span> 121 King Street, Melbourne 3000 Australia</span>
+                <span><span>Adress:</span> Behind UK washing Center, Azad Chowk, Aurangabad 431001</span>
               </li>
             </ul>
           </div>
@@ -51,16 +59,16 @@ export default function Footer() {
               <input type="submit" className="newslettersubmit" defaultValue="GO" />
               <ul className="inline-list">
                 <li className="flickr">
-                  <a href="http://www.flickr.com/#"><i className="fa fa-flickr" /></a>
+                  <a href="https://www.instagram.com/qualitytredingco?igsh=MWR6NTcyYnpud2Zqcw%3D%3D&utm_source=qr"><i className="fa fa-instagram" /></a>
                 </li>
                 <li className="facebook">
-                  <a href="https://www.facebook.com/#"><i className="fa fa-facebook" /></a>
+                  <a href="#"><i className="fa fa-facebook" /></a>
                 </li>
                 <li className="twitter">
-                  <a href="https://twitter.com/#"><i className="fa fa-twitter" /></a>
+                  <a href="#"><i className="fa fa-twitter" /></a>
                 </li>
                 <li className="vimeo">
-                  <a href="https://vimeo.com/#"><i className="fa fa-vimeo-square" /></a>
+                  <a href="#"><i className="fa fa-vimeo-square" /></a>
                 </li>
               </ul>
             </div>
@@ -74,11 +82,11 @@ export default function Footer() {
       <div className="small-12 large-12 columns">
         <div className="copyright-menu">
           <ul id="menu-footer-menu" className="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Services</a></li>
-            <li><a href="blog.html">Projects</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">portfolio</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>

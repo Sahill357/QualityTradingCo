@@ -8,8 +8,8 @@ export default function Services() {
     <div className="row">
       <div className="small-12 large-6 large-offset-3 columns">
         <div className="wd-title-section_c">
-          <h2>We Provide Flooring Services</h2>
-          <h5> To many clients like government, homes and offices</h5>
+          <h2>we provide premium Tile's & Marble's chemical solutions with unmatched expertise.</h2>
+          <h5> We serve a wide range of clients, including residential properties and commercial offices.</h5>
         </div>
       </div>
     </div>

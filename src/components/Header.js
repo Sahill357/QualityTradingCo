@@ -21,9 +21,14 @@ const Header = () => {
       <ul className="title-area">
         <li className="name">
           <h1>
-            <a title="Flooring Company WordPress Theme" rel="home" href="index.html">
-              <img alt="logo" src="assets/images/logo-white.png" />
-            </a>
+          <a title="Flooring Company WordPress Theme" rel="home" href="index.html">
+  <img
+    alt="logo"
+    src="assets/images/qualitytrading2-removebg-preview.png"
+    style={{ width: '150px', height: 'auto' }} // Use an object for the style prop
+  />
+</a>
+
           </h1>
         </li>
         <li className="toggle-topbar menu-icon">
@@ -34,22 +39,22 @@ const Header = () => {
         <div className="menu-main-menu-container">
           <ul id="menu-main-menu" className="menu">
             <li id="menu-item-1324" className="active_menu">
-              <a href="index.html" className="has-icon">Home</a>
+              <a href="/" className="has-icon">Home</a>
             </li>
            
                 <li id="menu-item-1313">
-                  <a href="services.html" className="has-icon">Services</a>
+                  <a href="/Services" className="has-icon">Services</a>
                 </li>
                 <li id="menu-item-1313">
-                  <a href="services.html" className="has-icon">projects</a>
+                  <a href="/Portfolio" className="has-icon">Portfolio</a>
                 </li>
             
                 <li id="menu-item-1309">
-                  <a href="about-us.html" className="has-icon">About Us</a>
+                  <a href="/About" className="has-icon">About Us</a>
                 </li>
              
             <li id="menu-item-1308">
-              <a href="contact.html" className="has-icon">Contact </a>
+              <a href="/Contact" className="has-icon">Contact </a>
             </li>
           </ul>
         </div>

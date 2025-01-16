@@ -1,169 +1,200 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Services from "../layouts/ServicesLayout";
 import CallToAction from "../layouts/CallToActionLayout";
-import Projects from "../layouts/ProjectsLayout";
+import Projects from "../layouts/portfolioLayout";
 import GetFreeQuote from "../layouts/GetFreeQuoteLayout";
 import Footer from "../components/Footer";
 
-export default function About() {
-  // Scroll to the top when the component mounts
+export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    'assets/images/slide-3-1.jpg',
+    'assets/images/slide-1.jpg',
+    'assets/images/slide-2.jpg',
+  ];
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  };
 
   return (
     <>
-      {/* <!-- Start Slider --> */}
+      <style>
+        {`
+          .slider-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+          }
 
-      <section className="slider">
-        <div className="flexslider">
+          .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .slide.active {
+            opacity: 1;
+          }
+
+          .slider-caption {
+  position: absolute;
+  top: 50%;
+  left: 200px; /* Adjust this value to move it to the right */
+  transform: translateY(-50%);
+  text-align: left; /* Keep the text left-aligned */
+  color: white;
+  width: 50%; /* You can adjust the width if needed */
+  padding: 0 20px;
+}
+
+
+          .slider-caption h1 {
+            font-size: 60px; /* Increased font size */
+            margin-bottom: 15px;
+            font-weight: 700; /* Bold title */
+          }
+
+          .slider-caption p {
+            font-size: 18px; /* Adjusted smaller font size for the paragraph */
+            margin-bottom: 20px;
+            font-weight: 400; /* Normal weight for paragraph text */
+          }
+
+          .slider-caption a {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: rgb(182,112,42);
+            color: white;
+            text-decoration: none;
+            
+            transition: background-color 0.3s;
+            font-weight: 600; /* Bold button text */
+          }
+
+          .slider-caption a:hover {
+            background-color:rgb(182,112,42);
+          }
+
+          .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+          }
+
+          .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            border: none;
+            padding: 0;
+          }
+
+          .nav-dot.active {
+            background-color: white;
+          }
+
+          .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: black;
+            transition: background-color 0.3s;
+          }
+
+          .slider-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+
+          .prev-arrow {
+            left: 20px;
+             
+          }
+
+          .next-arrow {
+            right: 20px;
+          }
+            .slider-caption h1, 
+.slider-caption p {
+  color: white; /* Apply white color to the text */
+}
+
+        `}
+      </style>
+
+      <section className="slider-section">
+        {slides.map((slide, index) => (
           <div
-            className="flex-viewport"
-            style={{ overflow: "hidden", position: "relative" }}
+            key={index}
+            className={`slide ${currentSlide === index ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${slide})` }}
           >
-            <ul
-              className="slides"
-              style={{
-                width: "1000%",
-                transitionDuration: "0s",
-                transform: "translate3d(-1519px, 0px, 0px)",
-              }}
-            >
-              <li
-                style={{
-                  backgroundImage: 'url("assets/images/slide-2.jpg")',
-                  width: 1519,
-                  marginRight: 0,
-                  float: "left",
-                  display: "block",
-                }}
-                className="clone"
-                aria-hidden="true"
-              >
-                <div className="row">
-                  <div className="slider-caption">
-                    <h1>We provide Ultimate Flooring and Paving Services.</h1>
-                    <p>
-                      We make it a priority to offer flexible services to
-                      accommodate your needs
-                    </p>
-                    <a href="#">Get A Quote Now</a>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={{
-                  backgroundImage: 'url("assets/images/slide-3-1.jpg")',
-                  width: 1519,
-                  marginRight: 0,
-                  float: "left",
-                  display: "block",
-                }}
-                className="flex-active-slide"
-                data-thumb-alt
-              >
-                <div className="row">
-                  <div className="slider-caption">
-                    <h1>We provide Ultimate Flooring and Paving Services.</h1>
-                    <p>
-                      We make it a priority to offer flexible services to
-                      accommodate your needs
-                    </p>
-                    <a href="#">Get A Quote Now</a>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={{
-                  backgroundImage: 'url("assets/images/slide-1.jpg")',
-                  width: 1519,
-                  marginRight: 0,
-                  float: "left",
-                  display: "block",
-                }}
-                data-thumb-alt
-              >
-                <div className="row">
-                  <div className="slider-caption">
-                    <h1>We provide Ultimate Flooring and Paving Services.</h1>
-                    <p>
-                      We make it a priority to offer flexible services to
-                      accommodate your needs
-                    </p>
-                    <a href="#">Get A Quote Now</a>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={{
-                  backgroundImage: 'url("assets/images/slide-2.jpg")',
-                  width: 1519,
-                  marginRight: 0,
-                  float: "left",
-                  display: "block",
-                }}
-                data-thumb-alt
-              >
-                <div className="row">
-                  <div className="slider-caption">
-                    <h1>We provide Ultimate Flooring and Paving Services.</h1>
-                    <p>
-                      We make it a priority to offer flexible services to
-                      accommodate your needs
-                    </p>
-                    <a href="#">Get A Quote Now</a>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={{
-                  backgroundImage: 'url("assets/images/slide-3-1.jpg")',
-                  width: 1519,
-                  marginRight: 0,
-                  float: "left",
-                  display: "block",
-                }}
-                className="clone"
-                aria-hidden="true"
-              >
-                <div className="row">
-                  <div className="slider-caption">
-                    <h1>We provide Ultimate Flooring and Paving Services.</h1>
-                    <p>
-                      We make it a priority to offer flexible services to
-                      accommodate your needs
-                    </p>
-                    <a href="#">Get A Quote Now</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <div className="slider-caption">
+              <h1>SPECIALIZING IN TILES & MARBLE CHEMICAL SOLUTIONS WITH UNMATCHED EXPERTISE.</h1>
+              <p>
+              We prioritize providing flexible tile & marble solutions tailored to your needs.
+              </p>
+              <a href="#">Get A Quote Now</a>
+            </div>
           </div>
-          <ol className="flex-control-nav flex-control-paging">
-            <li>
-              <a href="#" className="flex-active">
-                1
-              </a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-          </ol>
-          <ul className="flex-direction-nav">
-            <li className="flex-nav-prev">
-              <a className="flex-prev" href="#" />
-            </li>
-            <li className="flex-nav-next">
-              <a className="flex-next" href="#" />
-            </li>
-          </ul>
+        ))}
+
+        <button className="slider-arrow prev-arrow" onClick={prevSlide}>
+          ‹
+        </button>
+        <button className="slider-arrow next-arrow" onClick={nextSlide}>
+          ›
+        </button>
+
+        <div className="slider-nav">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`nav-dot ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
         </div>
       </section>
-
-      {/* <!-- End Slider --> */}
 
       <Services />
       <CallToAction />
@@ -173,5 +204,3 @@ export default function About() {
     </>
   );
 }
-
- 

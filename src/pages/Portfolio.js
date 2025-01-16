@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 
-export default function Projects() {
+export default function portfolio() {
   return (
     <>
       {/* <!-- Start Title Bar --> */}
@@ -10,7 +10,7 @@ export default function Projects() {
         <div className="row">
           <div className="large-12 columns p-t-70 text-left">
             <h2 id="page-title" className="title">
-              Single Portfolio
+                Portfolio
             </h2>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function Projects() {
             </div>
             <div className="small-12 large-6 columns">
               <div className="wd-title-block">
-                <h4>PROJECT DETAILS</h4>
+                <h4>PORTFOLIO DETAILS</h4>
               </div>
               <p>
                 We Are solar the simply dummy text of the printing and
