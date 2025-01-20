@@ -21,8 +21,9 @@ const Header = () => {
       <ul className="title-area">
         <li className="name">
           <h1>
-          <a title="Flooring Company WordPress Theme" rel="home" href="index.html">
+          <a title="" rel="home" href="/">
   <img
+   
     alt="logo"
     src="assets/images/qualitytrading2-removebg-preview.png"
     style={{ width: '150px', height: 'auto' }} // Use an object for the style prop
