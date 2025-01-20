@@ -46,7 +46,7 @@ export default function Contact() {
                         <input
                           type="text"
                           name="your-name"
-                          defaultValue
+                          defaultValue=""
                           size={40}
                           className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                           aria-required="true"
@@ -60,7 +60,7 @@ export default function Contact() {
                         <input
                           type="email"
                           name="your-email"
-                          defaultValue
+                          defaultValue=""
                           size={40}
                           className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                           aria-required="true"
@@ -74,7 +74,7 @@ export default function Contact() {
                         <input
                           type="text"
                           name="your-name"
-                          defaultValue
+                          defaultValue=""
                           size={40}
                           className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                           aria-required="true"
@@ -131,15 +131,16 @@ export default function Contact() {
 
       {/* Start Map */}
       <section className="google-map-section" style={{ width: "100%", height: "500px" }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.865025766515!2d75.35174617468499!3d19.88792052598364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba2bcde017cab%3A0xec14a995e4adcb8e!2sMoulana%20Azad%20Chowk%2C%20Kirti%20Housing%20Society%2C%20Shivdatta%20Housing%20Society%2C%20N%208%2C%20Jaswantpura%2C%20Chhatrapati%20Sambhaji%20Nagar%2C%20Maharashtra%20431003!5e0!3m2!1sen!2sin!4v1736924486437!5m2!1sen!2sin"
-          width="100%"
-          height="500px"
-          style={{ border: "0" }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.8087488364877!2d75.34936527728014!3d19.89029607820042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba39f4f400ee1%3A0xec716f80a157afb3!2sUK%20WASHING%20CENTER%20Aurangabad!5e0!3m2!1sen!2sin!4v1737379654848!5m2!1sen!2sin"
+  width="100%"
+  height="500px"
+  style={{ border: "0" }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
       </section>
       {/* End Map */}
 
