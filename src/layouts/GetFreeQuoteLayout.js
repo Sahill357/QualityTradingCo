@@ -108,7 +108,7 @@ export default function GetFreeQuote() {
                   <input
                     type="text"
                     name="your-name"
-                    defaultValue
+                    defaultValue= ""
                     size={40}
                     className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                     aria-required="true"
@@ -122,7 +122,7 @@ export default function GetFreeQuote() {
                   <input
                     type="email"
                     name="your-email"
-                    defaultValue
+                    defaultValue= ""
                     size={40}
                     className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                     aria-required="true"

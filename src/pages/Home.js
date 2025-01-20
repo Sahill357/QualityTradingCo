@@ -36,130 +36,148 @@ export default function Home() {
 
   return (
     <>
-      <style>
-        {`
-          .slider-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-          }
+     <style>
+  {`
+    .slider-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-          .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            background-size: cover;
-            background-position: center;
-          }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
 
-          .slide.active {
-            opacity: 1;
-          }
+    .slide.active {
+      opacity: 1;
+    }
 
-          .slider-caption {
-  position: absolute;
-  top: 50%;
-  left: 200px; /* Adjust this value to move it to the right */
-  transform: translateY(-50%);
-  text-align: left; /* Keep the text left-aligned */
-  color: white;
-  width: 50%; /* You can adjust the width if needed */
-  padding: 0 20px;
-}
+    .slider-caption {
+      position: absolute;
+      top: 50%;
+      left: 200px; /* Adjust this value to move it to the right */
+      transform: translateY(-50%);
+      text-align: left;
+      color: white; /* Ensure text is white */
+      width: 50%;
+      padding: 0 20px;
+    }
 
+    .slider-caption h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: white; /* Make sure the title is white */
+    }
 
-          .slider-caption h1 {
-            font-size: 60px; /* Increased font size */
-            margin-bottom: 15px;
-            font-weight: 700; /* Bold title */
-          }
+    .slider-caption p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      color: white; /* Make sure the paragraph is white */
+    }
 
-          .slider-caption p {
-            font-size: 18px; /* Adjusted smaller font size for the paragraph */
-            margin-bottom: 20px;
-            font-weight: 400; /* Normal weight for paragraph text */
-          }
+    .slider-caption a {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: rgb(182,112,42);
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      font-weight: 600;
+    }
 
-          .slider-caption a {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: rgb(182,112,42);
-            color: white;
-            text-decoration: none;
-            
-            transition: background-color 0.3s;
-            font-weight: 600; /* Bold button text */
-          }
+    .slider-caption a:hover {
+      background-color: rgb(182,112,42);
+    }
 
-          .slider-caption a:hover {
-            background-color:rgb(182,112,42);
-          }
+    .slider-nav {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
 
-          .slider-nav {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-          }
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
 
-          .nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            border: none;
-            padding: 0;
-          }
+    .nav-dot.active {
+      background-color: white;
+    }
 
-          .nav-dot.active {
-            background-color: white;
-          }
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: black;
+      transition: background-color 0.3s;
+    }
 
-          .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: black;
-            transition: background-color 0.3s;
-          }
+    .slider-arrow:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
 
-          .slider-arrow:hover {
-            background-color: rgba(255, 255, 255, 0.8);
-          }
+    .prev-arrow {
+      left: 20px;
+    }
 
-          .prev-arrow {
-            left: 20px;
-             
-          }
+    .next-arrow {
+      right: 20px;
+    }
 
-          .next-arrow {
-            right: 20px;
-          }
-            .slider-caption h1, 
-.slider-caption p {
-  color: white; /* Apply white color to the text */
-}
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+      .slider-caption {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        width: 80%;
+        padding: 0 15px;
+      }
 
-        `}
-      </style>
+      .slider-caption h1 {
+        font-size: 30px; /* Smaller font size for mobile */
+      }
+
+      .slider-caption p {
+        font-size: 14px; /* Smaller font size for mobile */
+      }
+
+      .slider-caption a {
+        padding: 10px 25px; /* Adjust button size for mobile */
+      }
+    }
+  `}
+</style>
+
 
       <section className="slider-section">
         {slides.map((slide, index) => (

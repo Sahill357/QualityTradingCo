@@ -59,8 +59,8 @@ export default function Services() {
                     <img src="assets/images/hard-wood-floor-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>
@@ -74,8 +74,8 @@ export default function Services() {
                     <img src="assets/images/area-rugs-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>
@@ -89,8 +89,8 @@ export default function Services() {
                     <img src="assets/images//wood-floor-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>
@@ -104,8 +104,8 @@ export default function Services() {
                     <img src="assets/images/area-rugs-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>
@@ -119,8 +119,8 @@ export default function Services() {
                     <img src="assets/images/tiles-floor-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>
@@ -134,8 +134,8 @@ export default function Services() {
                     <img src="assets/images/carpet-floor-m.jpg" alt="icon" />
                   </div>
                   <div className="box-description">
-                    <h3>Hardwood</h3>
-                    <p>Explore our range of premium hardwood flooring options.</p>
+                    <h3>Adhesives</h3>
+                    <p>Explore our range of premium Adhesives flooring options.</p>
                   </div>
                 </div>
               </a>

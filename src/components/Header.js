@@ -31,9 +31,10 @@ const Header = () => {
               
               {/* Menu Icon for Mobile */}
               <li className="toggle-topbar menu-icon">
-                <button onClick={toggleMenu} style={{ background: 'none', border: 'none', color: '#fff', fontSize: '16px' }}>
-                  {menuOpen ? 'Close' : 'Menu'}
-                </button>
+              <button onClick={toggleMenu} style={{ background: 'none', border: 'none', color: '#fff', fontSize: '24px' }}>
+  <span className="material-icons">menu</span>
+</button>
+
               </li>
             </ul>
 
